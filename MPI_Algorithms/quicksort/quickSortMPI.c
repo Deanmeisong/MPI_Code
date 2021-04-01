@@ -1,11 +1,3 @@
-/*
-*
-*名称:	quickSortMPI.c
-*功能:	quickSort算法MPI实现
-*作者：	LH
-*时间：2014-05-29
-*
-*/
 #include <stdlib.h>
 #include <stdio.h>
 #include <mpi.h>

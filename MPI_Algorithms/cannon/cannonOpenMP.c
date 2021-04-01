@@ -1,11 +1,3 @@
-/*
-*
-*名称:	cannonMPI.c
-*功能:	OpenMP实现的cannon算法
-*作者：	LH
-*时间：2014-05-29
-*
-*/
 #include <omp.h>
 #include <stdio.h>
 #include <stdlib.h>

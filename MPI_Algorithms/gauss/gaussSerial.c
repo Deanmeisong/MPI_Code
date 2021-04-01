@@ -1,15 +1,3 @@
-/*
-*
-*名称:	cannonSerial.c
-*功能:	cannon算法串行实现
-*作者：	LH
-*时间：2014-05-29
-*要求：测试数据文件第一个数n为方程组的阶数，
-*	   后续n*n个数为方程组Ax=b的A矩阵，接着n
-*	   个数为B向量
-*
-*/
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>

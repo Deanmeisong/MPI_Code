@@ -1,18 +1,10 @@
-/*
-*
-*Ãû³Æ:	quickSortSerial.c
-*¹¦ÄÜ:	quickSortËã·¨´®ĞĞÊµÏÖ
-*×÷Õß£º	LH
-*Ê±¼ä£º2014-05-29
-*
-*/
 #include <stdio.h>
 #include <time.h>
 #include <omp.h>
 #include <stdlib.h>
 
 /*
-*¹¦ÄÜ£ºÊä³öÊı×é
+*åŠŸèƒ½ï¼šè¾“å‡ºæ•°ç»„
 *
 */
 void print(double *x,int n)
@@ -26,7 +18,7 @@ void print(double *x,int n)
 }
 
 /*
-*¹¦ÄÜ£º¸ù¾İÊàÅ¦ÔªËØ»®·ÖÊı×é
+*åŠŸèƒ½ï¼šæ ¹æ®æ¢çº½å…ƒç´ åˆ’åˆ†æ•°ç»„
 *
 */
 int partions(double l[],int low,int high)
@@ -53,7 +45,7 @@ int partions(double l[],int low,int high)
 }
 
 /*
-*¹¦ÄÜ£ºµİ¹é¿ìËÙÅÅĞò
+*åŠŸèƒ½ï¼šé€’å½’å¿«é€Ÿæ’åº
 *
 */
 void qsortMe(double l[],int low,int high)
@@ -61,15 +53,15 @@ void qsortMe(double l[],int low,int high)
     int prvotloc;
     if(low<high)
     {
-        prvotloc=partions(l,low,high);    //½«µÚÒ»´ÎÅÅĞòµÄ½á¹û×÷ÎªÊàÖá
-        qsortMe(l,low,prvotloc-1); //µİ¹éµ÷ÓÃÅÅĞò ÓÉlow µ½prvotloc-1
-        qsortMe(l,prvotloc+1,high); //µİ¹éµ÷ÓÃÅÅĞò ÓÉ prvotloc+1µ½ high
+        prvotloc=partions(l,low,high);    //å°†ç¬¬ä¸€æ¬¡æ’åºçš„ç»“æœä½œä¸ºæ¢è½´
+        qsortMe(l,low,prvotloc-1); //é€’å½’è°ƒç”¨æ’åº ç”±low åˆ°prvotloc-1
+        qsortMe(l,prvotloc+1,high); //é€’å½’è°ƒç”¨æ’åº ç”± prvotloc+1åˆ° high
     }
 }
 
 void quicksort(double l[],int n)
 {
-    qsortMe(l,0,n-1); //µÚÒ»¸ö×÷ÎªÊàÖá £¬´ÓµÚÒ»¸öÅÅµ½µÚn¸ö
+    qsortMe(l,0,n-1); //ç¬¬ä¸€ä¸ªä½œä¸ºæ¢è½´ ï¼Œä»ç¬¬ä¸€ä¸ªæ’åˆ°ç¬¬nä¸ª
 }
 
 void main()
