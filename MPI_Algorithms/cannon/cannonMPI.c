@@ -1,11 +1,3 @@
-/*
-*
-*Ãû³Æ:	cannonMPI.c
-*¹¦ÄÜ:	MPIÊµÏÖµÄcannonËã·¨
-*×÷Õß£º	LH
-*Ê±¼ä£º2014-05-29
-*
-*/
 #include <stdlib.h>
 #include <string.h>
 #include <mpi.h>
@@ -77,7 +69,7 @@ int main(int argc, char *argv[])
    {
      togetherResult();
 	 /*
-	 *Êä³öÔËËã½á¹û£¬Êı¾İÁ¿½Ï´óÊ±×¢ÊÍ¸ÃÓï¾ä
+	 *è¾“å‡ºè¿ç®—ç»“æœï¼Œæ•°æ®é‡è¾ƒå¤§æ—¶æ³¨é‡Šè¯¥è¯­å¥
      print(A,"random matrix A : \n");
 	 print(B,"random matrix B : \n");
 	 print(C,"Matrix C = A * B : \n");
@@ -96,7 +88,7 @@ int main(int argc, char *argv[])
 }
 
 /*
-*¹¦ÄÜ£º´¦ÀíÆ÷Âß¼­ÕóÁĞ×ø±êÖÁrankºÅµÄ×ª»» 
+*åŠŸèƒ½ï¼šå¤„ç†å™¨é€»è¾‘é˜µåˆ—åæ ‡è‡³rankå·çš„è½¬æ¢ 
 *
 */
 int getIndex(int row, int col, int sqrtNum)
@@ -105,7 +97,7 @@ int getIndex(int row, int col, int sqrtNum)
 }
 
 /*
-*¹¦ÄÜ£º´ÓÎÄ¼şÖĞ¶ÁÈ¡²âÊÔÊı¾İ
+*åŠŸèƒ½ï¼šä»æ–‡ä»¶ä¸­è¯»å–æµ‹è¯•æ•°æ®
 *
 */
 void randomABSave()
@@ -119,7 +111,7 @@ void randomABSave()
 		return(-1);
 	}
 	int input;
-	/*Ëæ»úÉú³ÉA,B,²¢³õÊ¼»¯C*/
+	/*éšæœºç”ŸæˆA,B,å¹¶åˆå§‹åŒ–C*/
     for(i=0; i<n ; i++)
       for(j=0; j<n ; j++)
 	  {
@@ -132,7 +124,7 @@ void randomABSave()
 }
 
 /*
-*¹¦ÄÜ£ºÁÙÊ±Éú³É²âÊÔÊı¾İ
+*åŠŸèƒ½ï¼šä¸´æ—¶ç”Ÿæˆæµ‹è¯•æ•°æ®
 *
 */
 void randomAB()
@@ -141,7 +133,7 @@ void randomAB()
 
     srand((unsigned int)time(NULL));
 
-	/*Ëæ»úÉú³ÉA,B,²¢³õÊ¼»¯C*/
+	/*éšæœºç”ŸæˆA,B,å¹¶åˆå§‹åŒ–C*/
     for(i=0; i<n ; i++)
       for(j=0; j<n ; j++)
 	  {
@@ -153,7 +145,7 @@ void randomAB()
 
 
 /*
-*¹¦ÄÜ£º:rankÎª0µÄ´¦ÀíÆ÷ÏòÆäËû´¦ÀíÆ÷·¢ËÍA¡¢B¾ØÕóµÄÏà¹Ø¿é 
+*åŠŸèƒ½ï¼š:rankä¸º0çš„å¤„ç†å™¨å‘å…¶ä»–å¤„ç†å™¨å‘é€Aã€BçŸ©é˜µçš„ç›¸å…³å— 
 *
 */
 void scatterAB()
@@ -192,7 +184,7 @@ void scatterAB()
 }
 
 /*
-*¹¦ÄÜ£º½ÓÊÕ³õÊ¼²âÊÔÊı¾İ
+*åŠŸèƒ½ï¼šæ¥æ”¶åˆå§‹æµ‹è¯•æ•°æ®
 *
 */
 void initAlignment()
@@ -208,7 +200,7 @@ void initAlignment()
 }
 
 /*
-*¹¦ÄÜ£º·Ö¿é¾ØÕó×óÒÆºÍÉÏÒÆ£¬²¢¼ÆËã·Ö¿éc
+*åŠŸèƒ½ï¼šåˆ†å—çŸ©é˜µå·¦ç§»å’Œä¸Šç§»ï¼Œå¹¶è®¡ç®—åˆ†å—c
 *
 */
 void mainShift()
@@ -231,7 +223,7 @@ void mainShift()
 }
 
 /*
-*¹¦ÄÜ£ºÖ÷´¦ÀíÆ÷½ÓÊÕ¸÷¸ö´¦ÀíÆ÷µÄÔËËã½á¹û²¢ÕûºÏ
+*åŠŸèƒ½ï¼šä¸»å¤„ç†å™¨æ¥æ”¶å„ä¸ªå¤„ç†å™¨çš„è¿ç®—ç»“æœå¹¶æ•´åˆ
 *
 */
 void togetherResult()
@@ -269,7 +261,7 @@ void togetherResult()
 
 
 /*
-*¹¦ÄÜ£º´òÓ¡¾ØÕó
+*åŠŸèƒ½ï¼šæ‰“å°çŸ©é˜µ
 *
 */
 void print(float **m,char *str)
