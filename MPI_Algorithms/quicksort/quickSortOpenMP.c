@@ -1,11 +1,3 @@
-/*
-*
-*名称:	quickSortOpenMP.c
-*功能:	quickSort算法OpenMP实现
-*作者：	LH
-*时间：2014-05-29
-*
-*/
 #include <stdio.h>
 #include <time.h>
 #include <omp.h>
