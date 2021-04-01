@@ -1,11 +1,3 @@
-/*
-*
-*名称:	bfsMPI.c
-*功能:	宽度优先搜索算法MPI实现
-*作者：	LH
-*时间： 2014-05-29
-*
-*/
 #include <iostream>
 #include <Queue>
 #include <stdlib.h>
