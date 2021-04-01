@@ -1,11 +1,3 @@
-/*
-*
-*Ãû³Æ:	cannonSerial.c
-*¹¦ÄÜ:	cannonËã·¨´®ĞĞÊµÏÖ
-*×÷Õß£º	LH
-*Ê±¼ä£º2014-05-29
-*
-*/
 #include <stdlib.h>
 #include <string.h>
 #include <time.h>
@@ -20,7 +12,7 @@ int main(int argc, char *argv[])
 { 
     int i; 
     matrixScale = atoi(argv[1]);  
-    clock_t start,end ;//¶¨ÒåCPUÊ±ÖÓ
+    clock_t start,end ;//å®šä¹‰CPUæ—¶é’Ÿ
     double time=0;
     start=clock();
     printf("\n");
@@ -49,7 +41,7 @@ int main(int argc, char *argv[])
 
 
 /*
-*¹¦ÄÜ£º´ÓÎÄ¼şÖĞ¶ÁÈ¡²âÊÔÊı¾İ
+*åŠŸèƒ½ï¼šä»æ–‡ä»¶ä¸­è¯»å–æµ‹è¯•æ•°æ®
 *
 */
 void randomABsave()
@@ -63,7 +55,7 @@ void randomABsave()
         return(-1);
     }	
     int input;
-    /*Ëæ»úÉú³ÉmatrixA,matrixB,²¢³õÊ¼»¯matrixC*/
+    /*éšæœºç”ŸæˆmatrixA,matrixB,å¹¶åˆå§‹åŒ–matrixC*/
     for(i=0; i<matrixScale ; i++)
         for(j=0; j<matrixScale ; j++)
         {
@@ -76,14 +68,14 @@ void randomABsave()
 }
 
 /*
-*¹¦ÄÜ£ºÁÙÊ±Éú³É²âÊÔÊı¾İ
+*åŠŸèƒ½ï¼šä¸´æ—¶ç”Ÿæˆæµ‹è¯•æ•°æ®
 *
 */
 void randomAB()
 {
     int i,j;
     srand((unsigned int)time(NULL));   
-    /*Ëæ»úÉú³ÉmatrixA,matrixB,²¢³õÊ¼»¯matrixC*/
+    /*éšæœºç”ŸæˆmatrixA,matrixB,å¹¶åˆå§‹åŒ–matrixC*/
     for(i=0; i<matrixScale ; i++)
         for(j=0; j<matrixScale ; j++)
         {
@@ -94,7 +86,7 @@ void randomAB()
 }
 
 /*
-*¹¦ÄÜ£º·Ö¿é¾ØÕó×óÒÆºÍÉÏÒÆ£¬²¢¼ÆËã·Ö¿éc
+*åŠŸèƒ½ï¼šåˆ†å—çŸ©é˜µå·¦ç§»å’Œä¸Šç§»ï¼Œå¹¶è®¡ç®—åˆ†å—c
 *
 */
 void mainShift()
@@ -111,7 +103,7 @@ void print(float **m,char *str)
 {
     int i,j;
     printf("%s",str);
-    /*´òÓ¡¾ØÕóm*/
+    /*æ‰“å°çŸ©é˜µm*/
     for(i=0;i<matrixScale;i++)
     {
         for(j=0;j<matrixScale;j++)
