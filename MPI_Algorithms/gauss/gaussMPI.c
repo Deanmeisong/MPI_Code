@@ -1,11 +1,3 @@
-/*
-*
-*名称:	cannonMPI.c
-*功能:	cannon算法MPI实现
-*作者：	LH
-*时间：2014-05-29
-*
-*/
 #include <stdio.h>
 #include <stdlib.h>
 #include <mpi.h>
